@@ -26,7 +26,3 @@ class PdfViewSet(viewsets.ModelViewSet):
     pagination_class = pagination.PageNumberPagination
     filter_backends = [DjangoFilterBackend]
     filterset_class = PdfFilter
-
-"""
-make other CRUD tests
-"""

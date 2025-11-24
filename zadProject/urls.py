@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/prophets/', include('prophets.urls')),
     path('api/prayer/', include('Prayer.urls')),
+    path('api/hadith/', include('hadith.urls')),
 ]
 
 if settings.DEBUG:
