@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'prophets',
     'Prayer',
     'hadith',
+    'azkar',
 ]
 
 MIDDLEWARE = [
