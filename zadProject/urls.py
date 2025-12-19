@@ -25,6 +25,7 @@ urlpatterns = [
     path('api/prayer/', include('Prayer.urls')),
     path('api/hadith/', include('hadith.urls')),
     path('api/azkar/', include('azkar.urls')),
+    path('api/doaa/', include('doaa.urls')),
 ]
 
 if settings.DEBUG:
