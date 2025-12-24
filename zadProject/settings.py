@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'azkar',
     'doaa',
     'Fiqh',
+    'tawhid',
 ]
 
 MIDDLEWARE = [
