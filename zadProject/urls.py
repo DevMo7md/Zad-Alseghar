@@ -26,6 +26,7 @@ urlpatterns = [
     path('api/hadith/', include('hadith.urls')),
     path('api/azkar/', include('azkar.urls')),
     path('api/doaa/', include('doaa.urls')),
+    path('api/fiqh/', include('Fiqh.urls')),
 ]
 
 if settings.DEBUG:
