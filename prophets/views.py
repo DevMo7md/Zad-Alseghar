@@ -6,11 +6,15 @@ from rest_framework import status, viewsets, mixins
 from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
 
-from .models import Prophet, Video, PDF
+from .models import Prophet, Video, Pdf
 from .serializers import ProphetSerializer, VideoSerializer, PDFSerializer
+from accounts.permissions import IsStaffOrReadOnly
+from rest_framework import permissions
+
 # Create your views here.
 
 class ProphetList(APIView):
+    permission_classes = [permissions.IsAuthenticated, IsStaffOrReadOnly]
 
     def get(self, request):
         prophets = Prophet.objects.all().order_by('name')
@@ -43,7 +47,9 @@ class ProphetList(APIView):
     
 
 
+
 class ProphetDetail(APIView):
+    permission_classes = [permissions.IsAuthenticated, IsStaffOrReadOnly]
 
     def get_object(self, pk):
         return get_object_or_404(Prophet, pk=pk)
@@ -76,20 +82,22 @@ class ProphetDetail(APIView):
 
 
 class VideoViewSet(mixins.RetrieveModelMixin,
+                    mixins.DestroyModelMixin,
                     mixins.CreateModelMixin,
                     mixins.UpdateModelMixin,
-                    mixins.DestroyModelMixin,
                     viewsets.GenericViewSet):
     queryset = Video.objects.all()
     serializer_class = VideoSerializer
     pagination_class = PageNumberPagination
+    permission_classes = [permissions.IsAuthenticated, IsStaffOrReadOnly]
 
 class PdfViewSet(mixins.RetrieveModelMixin,
                     mixins.CreateModelMixin,
                     mixins.UpdateModelMixin,
                     mixins.DestroyModelMixin,
                     viewsets.GenericViewSet):
-    queryset = PDF.objects.all()
+    queryset = Pdf.objects.all()
     serializer_class = PDFSerializer
     pagination_class = PageNumberPagination
+    permission_classes = [permissions.IsAuthenticated, IsStaffOrReadOnly]
 

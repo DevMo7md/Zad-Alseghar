@@ -5,12 +5,15 @@ from .models import Doaa, Category
 from .serializers import DoaaSerializer, CategorySerializer
 from django_filters.rest_framework import DjangoFilterBackend
 from .filters import DoaaFilter
+from accounts.permissions import IsStaffOrReadOnly
+from rest_framework import permissions
 
 # Create your views here.
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     pagination_class = pagination.PageNumberPagination
+    permission_classes = [permissions.IsAuthenticated, IsStaffOrReadOnly]
 
 class DoaaViewSet(viewsets.ModelViewSet):
     queryset = Doaa.objects.all().order_by('order', '-created_at')
@@ -18,6 +21,7 @@ class DoaaViewSet(viewsets.ModelViewSet):
     pagination_class = pagination.PageNumberPagination
     filter_backends = [DjangoFilterBackend]
     filterset_class = DoaaFilter
+    permission_classes = [permissions.IsAuthenticated, IsStaffOrReadOnly]
 
     @action(detail=False, methods=['get'], url_path='category/(?P<category_name>[^/.]+)')
     def get_by_category(self, request, category_name=None):

@@ -7,4 +7,4 @@ admin.site.site_title = "Zad Al-Seghar Admin Portal"
 
 admin.site.register(Prophet)
 admin.site.register(Video)
-admin.site.register(PDF)
+admin.site.register(Pdf)

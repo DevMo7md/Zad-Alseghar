@@ -1,5 +1,5 @@
 import django_filters
-from .models import Video, PDF
+from .models import Video, Pdf
 
 class VideoFilter(django_filters.FilterSet):
     title = django_filters.CharFilter(field_name='title', lookup_expr='icontains')
@@ -15,5 +15,5 @@ class PdfFilter(django_filters.FilterSet):
     created_at = django_filters.DateFromToRangeFilter(field_name='created_at')
 
     class Meta:
-        model = PDF
+        model = Pdf
         fields = ['title', 'created_at']

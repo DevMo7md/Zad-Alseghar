@@ -22,7 +22,7 @@ class Video(models.Model):
     def __str__(self):
         return self.title
     
-class PDF(models.Model):
+class Pdf(models.Model):
     prophet = models.ForeignKey(Prophet, related_name='pdfs', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     file = models.FileField(upload_to='pdfs/')

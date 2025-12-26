@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Video, PDF
+from .models import Video, Pdf
 
 class VideoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -30,6 +30,6 @@ class VideoSerializer(serializers.ModelSerializer):
 
 class PDFSerializer(serializers.ModelSerializer):
     class Meta:
-        model = PDF
+        model = Pdf
         fields = ['id', 'title', 'file', 'order', 'created_at', 'updated_at']
         read_only_fields = ['id', 'created_at', 'updated_at']

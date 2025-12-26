@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Prophet, Video, PDF
+from .models import Prophet, Video, Pdf
 
 
 
@@ -34,7 +34,7 @@ class VideoSerializer(serializers.ModelSerializer):
 class PDFSerializer(serializers.ModelSerializer):
     prophet_id = serializers.PrimaryKeyRelatedField(queryset=Prophet.objects.all(), source='prophet', write_only=True)
     class Meta:
-        model = PDF
+        model = Pdf
         fields = ['id', 'title', 'file', 'prophet_id', 'created_at', 'updated_at']
         read_only_fields = ['id', 'created_at', 'updated_at']
 

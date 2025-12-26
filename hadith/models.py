@@ -16,7 +16,7 @@ class Video(models.Model):
         return self.title
     
 
-class PDF(models.Model):
+class Pdf(models.Model):
     title = models.CharField(max_length=200)
     file = models.FileField(upload_to='hadith_pdfs/')
     order = models.IntegerField(default=0, null=True, blank=True)

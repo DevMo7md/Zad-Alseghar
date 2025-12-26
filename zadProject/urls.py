@@ -28,6 +28,7 @@ urlpatterns = [
     path('api/doaa/', include('doaa.urls')),
     path('api/fiqh/', include('Fiqh.urls')),
     path('api/tawhid/', include('tawhid.urls')),
+    path('api/accounts/', include('accounts.urls')),
 ]
 
 if settings.DEBUG:
