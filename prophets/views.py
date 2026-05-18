@@ -30,7 +30,7 @@ class ProphetList(APIView):
             prophets = prophets.filter(age=age)
         
         if info:
-            prophets = prophets.filter(info=info)
+            prophets = prophets.filter(info__icontains=info)
 
 
         paginator = PageNumberPagination()

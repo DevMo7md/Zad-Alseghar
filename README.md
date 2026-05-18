@@ -12,6 +12,7 @@ Built with Django REST Framework · JWT Authentication · Role-Based Access Cont
 [![Django](https://img.shields.io/badge/Django-5.2-092E20?logo=django&logoColor=white)](https://djangoproject.com)
 [![DRF](https://img.shields.io/badge/DRF-3.x-ff1709?logo=django&logoColor=white)](https://www.django-rest-framework.org)
 [![JWT](https://img.shields.io/badge/Auth-JWT-000000?logo=jsonwebtokens&logoColor=white)](https://django-rest-framework-simplejwt.readthedocs.io)
+[![Postman](https://img.shields.io/badge/Postman-Collections-FF6C37?logo=postman&logoColor=white)](https://www.postman.com)
 
 ---
 
@@ -35,6 +36,7 @@ Built with Django REST Framework · JWT Authentication · Role-Based Access Cont
   - [Doaa (الدعاء)](#doaa-الدعاء)
   - [Fiqh (الفقه)](#fiqh-الفقه)
   - [Tawhid (التوحيد)](#tawhid-التوحيد)
+- [Postman Collections](#-postman-collections)
 - [Pagination](#-pagination)
 - [Filtering](#-filtering)
 - [Error Handling](#-error-handling)
@@ -93,6 +95,16 @@ zadProject/
 ├── manage.py
 ├── .env                 # Environment variables (not in repo)
 └── .gitignore
+
+postman/                 # Postman API collections (8 collections)
+├── Accounts app.postman_collection.json
+├── Azkar app.postman_collection.json
+├── Do'aa app.postman_collection.json
+├── Fiqh app.postman_collection.json
+├── Hadith app.postman_collection.json
+├── Prayer app.postman_collection.json
+├── Prophets app.postman_collection.json
+└── Tawhid app.postman_collection.json
 ```
 
 ---
@@ -638,6 +650,69 @@ Tawhid (Islamic monotheism) content with categories, videos, and PDFs.
 #### Categories, Videos & PDFs
 
 Identical structure to [Fiqh](#fiqh-الفقه) — replace `/api/fiqh/` with `/api/tawhid/`.
+
+---
+
+## 📮 Postman Collections
+
+A complete set of **8 Postman collections** is included in the `postman/` directory, providing ready-to-use request templates for every endpoint in the API. Each collection is pre-configured with Bearer Token authentication and uses a `{{base_url}}` environment variable for easy switching between local and deployed environments.
+
+### 📥 Quick Setup
+
+1. **Import Collections** — Open Postman → **Import** → drag all `.json` files from the `postman/` directory
+2. **Configure Environment** — Create a Postman environment with the following variable:
+
+   | Variable | Initial Value | Description |
+   |---|---|---|
+   | `base_url` | `http://127.0.0.1:8000/api` | Base URL for all API requests |
+
+3. **Authenticate** — Use the **Accounts** collection to register or login, then copy the `access` token into the collection-level Bearer Token
+
+### 📦 Available Collections
+
+| # | Collection | File | Requests | Covers |
+|:---:|---|---|:---:|---|
+| 1 | **Accounts** | `Accounts app.postman_collection.json` | 3 | Register, Login (JWT), Dashboard Stats |
+| 2 | **Prophets** (الأنبياء) | `Prophets app.postman_collection.json` | 11 | Prophet CRUD, Videos (POST/GET/PUT/DELETE), PDF details |
+| 3 | **Prayer** (الصلاة) | `Prayer app.postman_collection.json` | 13 | Categories, Videos CRUD (GET/POST/PUT/PATCH/DELETE), PDFs CRUD |
+| 4 | **Hadith** (الحديث) | `Hadith app.postman_collection.json` | 12 | Videos CRUD (with filters), PDFs CRUD (GET/POST/PUT/PATCH/DELETE) |
+| 5 | **Azkar** (الأذكار) | `Azkar app.postman_collection.json` | 11 | Categories CRUD, Azkar Contents CRUD, Filter by category |
+| 6 | **Do'aa** (الدعاء) | `Do'aa app.postman_collection.json` | 12 | Categories CRUD, Doaa Contents CRUD, Filter by category |
+| 7 | **Fiqh** (الفقه) | `Fiqh app.postman_collection.json` | 16 | Categories CRUD, Videos CRUD (with filters), PDFs CRUD |
+| 8 | **Tawhid** (التوحيد) | `Tawhid app.postman_collection.json` | 16 | Categories CRUD, Videos CRUD (with filters), PDFs CRUD |
+
+> **Total: 94 pre-configured requests** covering every endpoint across all 8 application modules.
+
+### 🔑 Authentication in Collections
+
+All collections (except Accounts login/register) include **collection-level Bearer Token** authentication. After obtaining a JWT token via login:
+
+1. Copy the `access` token from the login response
+2. Go to the collection's **Authorization** tab
+3. Paste the token in the **Token** field
+4. All requests within that collection will inherit the authorization automatically
+
+### 📝 Collection Features
+
+Each collection includes:
+
+- ✅ **Pre-built request bodies** with sample data (Arabic & English)
+- ✅ **Query parameter examples** for filtering endpoints (title, category, date range)
+- ✅ **File upload support** for thumbnails, videos, and PDF resources
+- ✅ **Full CRUD coverage** — GET, POST, PUT, PATCH, and DELETE for every resource
+- ✅ **Environment variable** `{{base_url}}` for seamless environment switching
+
+### 💡 Usage Tips
+
+```
+# Example: Set base_url for local development
+base_url = http://127.0.0.1:8000/api
+
+# Example: Set base_url for production
+base_url = https://your-domain.com/api
+```
+
+> **Note:** Certain collections (Hadith, Prayer) use app-specific base URL paths. Ensure the `base_url` variable is set correctly for each collection. Refer to the **API Reference** section above for the exact base paths.
 
 ---
 
