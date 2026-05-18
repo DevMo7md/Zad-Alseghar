@@ -1,0 +1,510 @@
+{
+  "info": {
+    "_postman_id": "c1bb83f8-e5b2-4c91-a97d-3f9ec6ac3c33",
+    "name": "Prophets app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46754777",
+    "_collection_link": "https://go.postman.co/collection/46754777-c1bb83f8-e5b2-4c91-a97d-3f9ec6ac3c33?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Prophets",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            ""
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "محمد",
+              "disabled": true
+            },
+            {
+              "key": "age",
+              "value": "63",
+              "disabled": true
+            },
+            {
+              "key": "info",
+              "value": "you can serch here by any thing you know about the prophrt who you want to search about him",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Prophet Details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "1",
+            ""
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Post Prophet",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "يوسف عليه السلام",
+              "type": "text",
+              "uuid": "4979a20f-dbef-4d90-9d2b-12e03d8f55a5"
+            },
+            {
+              "key": "age",
+              "value": "77",
+              "type": "text",
+              "uuid": "9cbf2c81-70cc-465c-b4a3-cdda7bd2db73"
+            },
+            {
+              "key": "info",
+              "value": "كان له 11 اخوة",
+              "type": "text",
+              "uuid": "b82fb432-1fa9-41f8-9157-b88d53879bb8"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            ""
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "Update Prophet",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Successful PUT request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "محمد (صلى الله عليه وسلم)",
+              "type": "text",
+              "uuid": "57984ed2-2050-488b-a776-e5dba1325b0a"
+            },
+            {
+              "key": "age",
+              "value": "63",
+              "type": "text",
+              "uuid": "78045b7b-070f-4a02-86da-81b3bbcbee04"
+            },
+            {
+              "key": "info",
+              "value": "رسول الإسلام محمد صلى الله عليه وسلم . نشأ في مكه المكرمه بالسعوديه .\\r\\nهاجر الى المدينه المنوره لنشر الاسلام لقيام اهل مكه باضطهاده",
+              "type": "text",
+              "uuid": "63033a37-2822-48d6-ab2a-79451d1a1d19"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "1",
+            ""
+          ]
+        },
+        "description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "Partial update Prophet",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Successful PUT request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "محمد (صلى الله عليه وسلم)",
+              "type": "text",
+              "uuid": "8bb5bce3-c73a-4d1c-8a8e-3e11fc4deb4a",
+              "disabled": true
+            },
+            {
+              "key": "age",
+              "value": "63",
+              "type": "text",
+              "uuid": "f17a0ea6-6699-459f-a4b1-442b83e997c7"
+            },
+            {
+              "key": "info",
+              "value": "رسول الإسلام محمد صلى الله عليه وسلم . نشأ في مكه المكرمه بالسعوديه .\\r\\nهاجر الى المدينه المنوره لنشر الاسلام لقيام اهل مكه باضطهاده",
+              "type": "text",
+              "uuid": "98867576-8e97-4b19-bd6d-243d7e67aeab",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "1",
+            ""
+          ]
+        },
+        "description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Prophet",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Successful DELETE request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "2",
+            ""
+          ]
+        },
+        "description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "Post video",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "قصة سيدنا يوسف عليه السلام",
+              "type": "text",
+              "uuid": "1d01263c-a04d-42e3-a7c9-b4ec732e2916"
+            },
+            {
+              "key": "prophet_id",
+              "value": "3",
+              "type": "text",
+              "uuid": "8c02da84-71e6-4708-a7ea-0ab867ba7627"
+            },
+            {
+              "key": "thumbnail",
+              "type": "file",
+              "uuid": "aa3127af-e193-449e-b174-617798deb41c",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad"
+            },
+            {
+              "key": "description",
+              "value": "",
+              "type": "text",
+              "uuid": "d68eb3a1-a947-4d17-b004-71cef9f9c66f"
+            },
+            {
+              "key": "url",
+              "value": "",
+              "type": "text",
+              "uuid": "6fdb5bbd-6fa8-4cd3-a57a-b92b4e65c94f"
+            },
+            {
+              "key": "video",
+              "type": "file",
+              "uuid": "ea41635a-4047-4e01-bbc8-532b123731d0",
+              "src": "/C:/Users/moham/Videos/Hiroooo.mp4"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/material/videos/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "material",
+            "videos",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get video details",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{base_url}}/material/videos/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "material",
+            "videos",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update video",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "قصه سيدنا محمد صلى الله عليه و سلم",
+              "type": "text",
+              "uuid": "1d01263c-a04d-42e3-a7c9-b4ec732e2916"
+            },
+            {
+              "key": "prophet_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "8c02da84-71e6-4708-a7ea-0ab867ba7627"
+            },
+            {
+              "key": "thumbnail",
+              "type": "file",
+              "uuid": "aa3127af-e193-449e-b174-617798deb41c",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad"
+            },
+            {
+              "key": "description",
+              "value": "رسول الإسلام محمد صلى الله عليه وسلم . نشأ في مكه المكرمه بالسعوديه .\\\\r\\\\nهاجر الى المدينه المنوره لنشر الاسلام لقيام اهل مكه باضطهاده",
+              "type": "text",
+              "uuid": "d68eb3a1-a947-4d17-b004-71cef9f9c66f"
+            },
+            {
+              "key": "url",
+              "value": "",
+              "type": "text",
+              "uuid": "6fdb5bbd-6fa8-4cd3-a57a-b92b4e65c94f"
+            },
+            {
+              "key": "video",
+              "type": "file",
+              "uuid": "ea41635a-4047-4e01-bbc8-532b123731d0",
+              "src": "/C:/Users/moham/Videos/Hiroooo.mp4"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/material/videos/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "material",
+            "videos",
+            "1",
+            ""
+          ]
+        },
+        "description": "can make partial edit but prophet_id is always required"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete video",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{base_url}}/material/videos/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "material",
+            "videos",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get PDF details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/material/pdfs/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "material",
+            "pdfs",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY5NjIxOTQ3LCJpYXQiOjE3Njk2MTgzNDcsImp0aSI6IjU0MGU0ZTMxNTM4NjRjN2Q4MDY3MGUwNjliYzA0ZTgyIiwidXNlcl9pZCI6ImQyN2EzYmE3LTNiZTEtNDg0Yi05NTUwLTllODUwNTg0MjlhNiJ9.vtYnZFyNUoiBd5ybScKiKUiq6idizsdJ1ZUBpAQf2ec",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}

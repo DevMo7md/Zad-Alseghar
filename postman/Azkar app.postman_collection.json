@@ -1,0 +1,401 @@
+{
+  "info": {
+    "_postman_id": "8573c885-6352-4207-8edb-8ffa9a738247",
+    "name": "Azkar app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46754777",
+    "_collection_link": "https://go.postman.co/collection/46754777-8573c885-6352-4207-8edb-8ffa9a738247?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Categories",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2Nzk1MDYxLCJpYXQiOjE3NjY3OTE0NjEsImp0aSI6IjY2YmRlMjc3MTJkNTRjMWRiZWM2ZGY0NmUxY2U2YWVmIiwidXNlcl9pZCI6IjNjZjI5NDJkLWQ5MzgtNDAxZS05YTA3LTBmNDg3YTJkMjI2YiJ9.vneC3XkC8tQygLOiqQpghsieKdAKFscDOsdYPB54zMc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/azkar/categories/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "azkar",
+            "categories",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get one Category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/azkar/categories/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "azkar",
+            "categories",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Category",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2Nzk1MDYxLCJpYXQiOjE3NjY3OTE0NjEsImp0aSI6IjY2YmRlMjc3MTJkNTRjMWRiZWM2ZGY0NmUxY2U2YWVmIiwidXNlcl9pZCI6IjNjZjI5NDJkLWQ5MzgtNDAxZS05YTA3LTBmNDg3YTJkMjI2YiJ9.vneC3XkC8tQygLOiqQpghsieKdAKFscDOsdYPB54zMc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category",
+              "value": "النوم",
+              "type": "text",
+              "uuid": "d2f34e7d-4138-4585-b242-34bd9cd9b6ae"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/azkar/categories/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "azkar",
+            "categories",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Category",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category",
+              "value": "الصباح",
+              "type": "text",
+              "uuid": "d2f34e7d-4138-4585-b242-34bd9cd9b6ae"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/azkar/categories/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "azkar",
+            "categories",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Category",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/azkar/categories/3/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "azkar",
+            "categories",
+            "3",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Azkar",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/azkar/contents/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "azkar",
+            "contents",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get azkar by category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/azkar/contents/category/النوم/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "azkar",
+            "contents",
+            "category",
+            "النوم",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get one zekr",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/azkar/contents/3/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "azkar",
+            "contents",
+            "3",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post zekr",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "azkar",
+              "value": "اللهم انت ربي وضعت جنبي و بك ارفعه",
+              "type": "text",
+              "uuid": "00e74d6d-1f2d-45cb-83c9-5707aec6639f"
+            },
+            {
+              "key": "category",
+              "value": "4",
+              "type": "text",
+              "uuid": "abe78de4-0d18-40b5-a597-075ff84faea0"
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "a668b6e5-a65d-48f9-a401-52f8fb741c86"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/azkar/contents/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "azkar",
+            "contents",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update azkar (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "azkar",
+              "value": "سبحان الله وبحمده سبحان الله العظيم",
+              "type": "text",
+              "uuid": "6573f2d1-7e57-4e37-8b32-44b5595232da"
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "edad7211-363d-462c-9f92-2a093436c2da"
+            },
+            {
+              "key": "category",
+              "value": "1",
+              "type": "text",
+              "uuid": "bf4bb744-a73c-4467-b9bf-0f0051902684"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/azkar/contents/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "azkar",
+            "contents",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update azkar (PATCH)",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "azkar",
+              "value": "سبحان الله وبحمده سبحان الله العظيم",
+              "type": "text",
+              "uuid": "6573f2d1-7e57-4e37-8b32-44b5595232da",
+              "disabled": true
+            },
+            {
+              "key": "order",
+              "value": "4",
+              "type": "text",
+              "uuid": "edad7211-363d-462c-9f92-2a093436c2da"
+            },
+            {
+              "key": "category",
+              "value": "1",
+              "type": "text",
+              "uuid": "bf4bb744-a73c-4467-b9bf-0f0051902684",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/azkar/contents/4/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "azkar",
+            "contents",
+            "4",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Zekr",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/azkar/contents/4/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "azkar",
+            "contents",
+            "4",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2Nzk1MDYxLCJpYXQiOjE3NjY3OTE0NjEsImp0aSI6IjY2YmRlMjc3MTJkNTRjMWRiZWM2ZGY0NmUxY2U2YWVmIiwidXNlcl9pZCI6IjNjZjI5NDJkLWQ5MzgtNDAxZS05YTA3LTBmNDg3YTJkMjI2YiJ9.vneC3XkC8tQygLOiqQpghsieKdAKFscDOsdYPB54zMc",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}

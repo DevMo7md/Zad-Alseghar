@@ -1,0 +1,683 @@
+{
+  "info": {
+    "_postman_id": "cf6778e1-04ee-4266-9330-a1ffb6ba510a",
+    "name": "Fiqh app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46754777",
+    "_collection_link": "https://go.postman.co/collection/46754777-cf6778e1-04ee-4266-9330-a1ffb6ba510a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Categories",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/fiqh/categories/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "categories",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Categories",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Doaa",
+              "type": "text",
+              "uuid": "ca416f0c-2f94-4444-9757-f7a57ed454af"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/fiqh/categories/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "categories",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get One Category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/fiqh/categories/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "categories",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Category",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "AlSalah",
+              "type": "text",
+              "uuid": "ca416f0c-2f94-4444-9757-f7a57ed454af"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/fiqh/categories/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "categories",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Cateroy",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/fiqh/categories/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "categories",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Fiqh videos",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}/fiqh/videos/?title=الصلاة&description=كيفيه&category=AlSalah&created_at={DateTime object}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "videos",
+            ""
+          ],
+          "query": [
+            {
+              "key": "title",
+              "value": "الصلاة"
+            },
+            {
+              "key": "description",
+              "value": "كيفيه"
+            },
+            {
+              "key": "category",
+              "value": "AlSalah"
+            },
+            {
+              "key": "created_at",
+              "value": "{DateTime object}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post New Fiqh Video",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "678240f8-2ddb-49a6-a503-d5a437813261"
+            },
+            {
+              "key": "title",
+              "value": "فقه الصلاه",
+              "type": "text",
+              "uuid": "e7bb251c-7564-407b-9bb3-c989d919a0fd"
+            },
+            {
+              "key": "description",
+              "value": "فقه الصلاه كما يجب ان يكون",
+              "type": "text",
+              "uuid": "b5904658-fc79-468c-a290-ab3a693e788b"
+            },
+            {
+              "key": "url",
+              "value": "",
+              "type": "text",
+              "uuid": "e578b90f-7185-4aab-bbcc-60f658c6391f"
+            },
+            {
+              "key": "thumbnail",
+              "type": "file",
+              "uuid": "116dbae7-1afa-4b86-8932-6389db01db82",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad"
+            },
+            {
+              "key": "video",
+              "type": "file",
+              "uuid": "9d707117-50ca-41d2-8ff4-e1b208dea78c",
+              "src": "postman-cloud:///1f093ad9-a75c-44c0-a704-51bfa221fbc1"
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "54e847a4-c9ff-4845-abf9-643d96215aff"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/fiqh/videos/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "videos",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get one Video",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/fiqh/videos/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "videos",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Fiqh Video",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "678240f8-2ddb-49a6-a503-d5a437813261"
+            },
+            {
+              "key": "title",
+              "value": "فقه الصلاة",
+              "type": "text",
+              "uuid": "e7bb251c-7564-407b-9bb3-c989d919a0fd"
+            },
+            {
+              "key": "description",
+              "value": "سوف نتعلم بهذا الفيديو كيفيه و اركان الصلاه اللتي من دونها تبطل الصلاه",
+              "type": "text",
+              "uuid": "b5904658-fc79-468c-a290-ab3a693e788b"
+            },
+            {
+              "key": "url",
+              "value": "",
+              "type": "text",
+              "uuid": "e578b90f-7185-4aab-bbcc-60f658c6391f"
+            },
+            {
+              "key": "thumbnail",
+              "type": "file",
+              "uuid": "116dbae7-1afa-4b86-8932-6389db01db82",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad"
+            },
+            {
+              "key": "video",
+              "type": "file",
+              "uuid": "9d707117-50ca-41d2-8ff4-e1b208dea78c",
+              "src": "/C:/Users/moham/Videos/Hiroooo.mp4"
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "54e847a4-c9ff-4845-abf9-643d96215aff"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/fiqh/videos/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "videos",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Fiqh Video partial",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "678240f8-2ddb-49a6-a503-d5a437813261",
+              "disabled": true
+            },
+            {
+              "key": "title",
+              "value": "اركان الصلاة",
+              "type": "text",
+              "uuid": "e7bb251c-7564-407b-9bb3-c989d919a0fd",
+              "disabled": true
+            },
+            {
+              "key": "description",
+              "value": "سوف نتعلم بهذا الفيديو كيفيه و اركان الصلاه اللتي من دونها تبطل الصلاه",
+              "type": "text",
+              "uuid": "b5904658-fc79-468c-a290-ab3a693e788b"
+            },
+            {
+              "key": "url",
+              "value": "",
+              "type": "text",
+              "uuid": "e578b90f-7185-4aab-bbcc-60f658c6391f",
+              "disabled": true
+            },
+            {
+              "key": "thumbnail",
+              "type": "file",
+              "uuid": "116dbae7-1afa-4b86-8932-6389db01db82",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad",
+              "disabled": true
+            },
+            {
+              "key": "video",
+              "type": "file",
+              "uuid": "9d707117-50ca-41d2-8ff4-e1b208dea78c",
+              "src": "/C:/Users/moham/Videos/Hiroooo.mp4",
+              "disabled": true
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "54e847a4-c9ff-4845-abf9-643d96215aff",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/fiqh/videos/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "videos",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Video",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/fiqh/videos/4/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "videos",
+            "4",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Fiqh PDFs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/fiqh/pdfs/?title=الصلاة&category=Alsalah&created_at={Date object}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "pdfs",
+            ""
+          ],
+          "query": [
+            {
+              "key": "title",
+              "value": "الصلاة"
+            },
+            {
+              "key": "category",
+              "value": "Alsalah"
+            },
+            {
+              "key": "created_at",
+              "value": "{Date object}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Fiqh PDF",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "31e0d1a6-aed3-49a7-83e4-725b25673a80"
+            },
+            {
+              "key": "title",
+              "value": "فقه الصلاة",
+              "type": "text",
+              "uuid": "c3f8214b-eea2-4eba-8f3c-4a3ea1211dcd"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "01e125d4-87a7-4377-9acd-799b38a8b36a",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad"
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "9c06f696-72b9-48ff-95ef-84058edfe4d0"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/fiqh/pdfs/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "pdfs",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get one Fiqh PDF",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/fiqh/pdfs/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "pdfs",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Fiqh PDF",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "31e0d1a6-aed3-49a7-83e4-725b25673a80"
+            },
+            {
+              "key": "title",
+              "value": "فقه الصلاة 1",
+              "type": "text",
+              "uuid": "c3f8214b-eea2-4eba-8f3c-4a3ea1211dcd"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "01e125d4-87a7-4377-9acd-799b38a8b36a",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad"
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "9c06f696-72b9-48ff-95ef-84058edfe4d0"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/fiqh/pdfs/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "pdfs",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Fiqh PDF Partial",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "31e0d1a6-aed3-49a7-83e4-725b25673a80",
+              "disabled": true
+            },
+            {
+              "key": "title",
+              "value": "فقه الصلاة",
+              "type": "text",
+              "uuid": "c3f8214b-eea2-4eba-8f3c-4a3ea1211dcd"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "01e125d4-87a7-4377-9acd-799b38a8b36a",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad",
+              "disabled": true
+            },
+            {
+              "key": "order",
+              "value": "2",
+              "type": "text",
+              "uuid": "9c06f696-72b9-48ff-95ef-84058edfe4d0",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/fiqh/pdfs/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "pdfs",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Fiqh PDF",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/fiqh/pdfs/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "fiqh",
+            "pdfs",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2Nzk1MDYxLCJpYXQiOjE3NjY3OTE0NjEsImp0aSI6IjY2YmRlMjc3MTJkNTRjMWRiZWM2ZGY0NmUxY2U2YWVmIiwidXNlcl9pZCI6IjNjZjI5NDJkLWQ5MzgtNDAxZS05YTA3LTBmNDg3YTJkMjI2YiJ9.vneC3XkC8tQygLOiqQpghsieKdAKFscDOsdYPB54zMc",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}

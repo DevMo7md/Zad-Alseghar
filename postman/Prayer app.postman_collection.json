@@ -1,0 +1,569 @@
+{
+  "info": {
+    "_postman_id": "21f17c06-4a53-45fa-b3cd-c5fe179b6698",
+    "name": "Prayer app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46754777",
+    "_collection_link": "https://go.postman.co/collection/46754777-21f17c06-4a53-45fa-b3cd-c5fe179b6698?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Categories",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/categories/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "categories",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Prayer videos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/videos/?title=اركان&description=سوف نتعلم&category=PIllARS&created_at=",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "videos",
+            ""
+          ],
+          "query": [
+            {
+              "key": "title",
+              "value": "اركان",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "سوف نتعلم",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "PIllARS",
+              "type": "text"
+            },
+            {
+              "key": "created_at",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post New Prayer Video",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "678240f8-2ddb-49a6-a503-d5a437813261"
+            },
+            {
+              "key": "title",
+              "value": "اركان الصلاه 2",
+              "type": "text",
+              "uuid": "e7bb251c-7564-407b-9bb3-c989d919a0fd"
+            },
+            {
+              "key": "description",
+              "value": "سوف نتعلم بهذا الفيديو كيفيه و اركان الصلاه اللتي من دونها تبطل الصلاه",
+              "type": "text",
+              "uuid": "b5904658-fc79-468c-a290-ab3a693e788b"
+            },
+            {
+              "key": "url",
+              "value": "",
+              "type": "text",
+              "uuid": "e578b90f-7185-4aab-bbcc-60f658c6391f"
+            },
+            {
+              "key": "thumbnail",
+              "type": "file",
+              "uuid": "116dbae7-1afa-4b86-8932-6389db01db82",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad"
+            },
+            {
+              "key": "video",
+              "type": "file",
+              "uuid": "9d707117-50ca-41d2-8ff4-e1b208dea78c",
+              "src": "/C:/Users/moham/Videos/Hiroooo.mp4"
+            },
+            {
+              "key": "order",
+              "value": "2",
+              "type": "text",
+              "uuid": "54e847a4-c9ff-4845-abf9-643d96215aff"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/videos/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "videos",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get one Video",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/videos/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "videos",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Prayer Video",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "678240f8-2ddb-49a6-a503-d5a437813261"
+            },
+            {
+              "key": "title",
+              "value": "اركان الصلاه",
+              "type": "text",
+              "uuid": "e7bb251c-7564-407b-9bb3-c989d919a0fd"
+            },
+            {
+              "key": "description",
+              "value": "سوف نتعلم بهذا الفيديو كيفيه و اركان الصلاه اللتي من دونها تبطل الصلاه",
+              "type": "text",
+              "uuid": "b5904658-fc79-468c-a290-ab3a693e788b"
+            },
+            {
+              "key": "url",
+              "value": "",
+              "type": "text",
+              "uuid": "e578b90f-7185-4aab-bbcc-60f658c6391f",
+              "disabled": true
+            },
+            {
+              "key": "thumbnail",
+              "type": "file",
+              "uuid": "116dbae7-1afa-4b86-8932-6389db01db82",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad"
+            },
+            {
+              "key": "video",
+              "type": "file",
+              "uuid": "9d707117-50ca-41d2-8ff4-e1b208dea78c",
+              "src": "/C:/Users/moham/Videos/Hiroooo.mp4",
+              "disabled": true
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "54e847a4-c9ff-4845-abf9-643d96215aff",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/videos/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "videos",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Prayer Video partial",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "678240f8-2ddb-49a6-a503-d5a437813261",
+              "disabled": true
+            },
+            {
+              "key": "title",
+              "value": "اركان الصلاة",
+              "type": "text",
+              "uuid": "e7bb251c-7564-407b-9bb3-c989d919a0fd"
+            },
+            {
+              "key": "description",
+              "value": "سوف نتعلم بهذا الفيديو كيفيه و اركان الصلاه اللتي من دونها تبطل الصلاه",
+              "type": "text",
+              "uuid": "b5904658-fc79-468c-a290-ab3a693e788b",
+              "disabled": true
+            },
+            {
+              "key": "url",
+              "value": "",
+              "type": "text",
+              "uuid": "e578b90f-7185-4aab-bbcc-60f658c6391f",
+              "disabled": true
+            },
+            {
+              "key": "thumbnail",
+              "type": "file",
+              "uuid": "116dbae7-1afa-4b86-8932-6389db01db82",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad",
+              "disabled": true
+            },
+            {
+              "key": "video",
+              "type": "file",
+              "uuid": "9d707117-50ca-41d2-8ff4-e1b208dea78c",
+              "src": "/C:/Users/moham/Videos/Hiroooo.mp4",
+              "disabled": true
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "54e847a4-c9ff-4845-abf9-643d96215aff",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/videos/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "videos",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Video",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/videos/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "videos",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Prayer PDFs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/pdfs/?title=اركان الصلاة 1&category=PILLARS&created_at=Date object",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "pdfs",
+            ""
+          ],
+          "query": [
+            {
+              "key": "title",
+              "value": "اركان الصلاة 1"
+            },
+            {
+              "key": "category",
+              "value": "PILLARS"
+            },
+            {
+              "key": "created_at",
+              "value": "Date object"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Prayer PDF",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "31e0d1a6-aed3-49a7-83e4-725b25673a80"
+            },
+            {
+              "key": "title",
+              "value": "اركان الصلاة 2",
+              "type": "text",
+              "uuid": "c3f8214b-eea2-4eba-8f3c-4a3ea1211dcd"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "01e125d4-87a7-4377-9acd-799b38a8b36a",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad"
+            },
+            {
+              "key": "order",
+              "value": "2",
+              "type": "text",
+              "uuid": "9c06f696-72b9-48ff-95ef-84058edfe4d0"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/pdfs/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "pdfs",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get one Prayer PDF",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/pdfs/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "pdfs",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Prayer PDF",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "31e0d1a6-aed3-49a7-83e4-725b25673a80"
+            },
+            {
+              "key": "title",
+              "value": "اركان الصلاة 1",
+              "type": "text",
+              "uuid": "c3f8214b-eea2-4eba-8f3c-4a3ea1211dcd"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "01e125d4-87a7-4377-9acd-799b38a8b36a",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad"
+            },
+            {
+              "key": "order",
+              "value": "2",
+              "type": "text",
+              "uuid": "9c06f696-72b9-48ff-95ef-84058edfe4d0"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/pdfs/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "pdfs",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Prayer PDF Partial",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "31e0d1a6-aed3-49a7-83e4-725b25673a80",
+              "disabled": true
+            },
+            {
+              "key": "title",
+              "value": "اركان الصلاة 2",
+              "type": "text",
+              "uuid": "c3f8214b-eea2-4eba-8f3c-4a3ea1211dcd"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "01e125d4-87a7-4377-9acd-799b38a8b36a",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad",
+              "disabled": true
+            },
+            {
+              "key": "order",
+              "value": "2",
+              "type": "text",
+              "uuid": "9c06f696-72b9-48ff-95ef-84058edfe4d0",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/pdfs/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "pdfs",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Prayer PDF",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/pdfs/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "pdfs",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2Nzk1MDYxLCJpYXQiOjE3NjY3OTE0NjEsImp0aSI6IjY2YmRlMjc3MTJkNTRjMWRiZWM2ZGY0NmUxY2U2YWVmIiwidXNlcl9pZCI6IjNjZjI5NDJkLWQ5MzgtNDAxZS05YTA3LTBmNDg3YTJkMjI2YiJ9.vneC3XkC8tQygLOiqQpghsieKdAKFscDOsdYPB54zMc",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}

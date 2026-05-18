@@ -1,0 +1,411 @@
+{
+  "info": {
+    "_postman_id": "27cccada-8c2d-4687-93de-fdddaee10dbb",
+    "name": "Do'aa app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46754777",
+    "_collection_link": "https://go.postman.co/collection/46754777-27cccada-8c2d-4687-93de-fdddaee10dbb?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Doaa Categories",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/doaa/categories/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "doaa",
+            "categories",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Doaa Category",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "الرزق",
+              "type": "text",
+              "uuid": "d2f34e7d-4138-4585-b242-34bd9cd9b6ae"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/doaa/categories/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "doaa",
+            "categories",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get one Doaa category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/doaa/categories/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "doaa",
+            "categories",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Doaa Category",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "الأرزاق",
+              "type": "text",
+              "uuid": "d2f34e7d-4138-4585-b242-34bd9cd9b6ae"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/doaa/categories/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "doaa",
+            "categories",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Doaa Category",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/doaa/categories/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "doaa",
+            "categories",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Doaa content",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/doaa/content/?title=رزق&content=أنزله&category=زاق",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "doaa",
+            "content",
+            ""
+          ],
+          "query": [
+            {
+              "key": "title",
+              "value": "رزق"
+            },
+            {
+              "key": "content",
+              "value": "أنزله"
+            },
+            {
+              "key": "category",
+              "value": "زاق"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Doaa content by category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/doaa/content/category/الرزق/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "doaa",
+            "content",
+            "category",
+            "الرزق",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Doaa Content",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "d2f34e7d-4138-4585-b242-34bd9cd9b6ae"
+            },
+            {
+              "key": "title",
+              "value": "دعاء النبي لإنزال الرزق من السماء و اخراجه من ارض",
+              "type": "text",
+              "uuid": "24cab32d-4173-4965-a61f-23077f20afdc"
+            },
+            {
+              "key": "content",
+              "value": "اللهم ان كان رزقي في الأرض ف أنزله و ان كان في الأرض ف أخرجه و ان كان بعيدا ف قربه ...الخ",
+              "type": "text",
+              "uuid": "8348a4e9-962d-47c3-bb36-db8b90fcb803"
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "f5c7c12b-6653-4307-a2cd-623186c9358e"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/doaa/content/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "doaa",
+            "content",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get one Doaa content",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/doaa/content/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "doaa",
+            "content",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Doaa Content",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "d2f34e7d-4138-4585-b242-34bd9cd9b6ae"
+            },
+            {
+              "key": "title",
+              "value": "دعاء النبي لإنزال الرزق من السماء و اخراجه من ارض",
+              "type": "text",
+              "uuid": "24cab32d-4173-4965-a61f-23077f20afdc"
+            },
+            {
+              "key": "content",
+              "value": "اللهم ان كان رزقي في الأرض ف أنزله و ان كان في الأرض ف أخرجه و ان كان بعيدا ف قربه ...الخ",
+              "type": "text",
+              "uuid": "8348a4e9-962d-47c3-bb36-db8b90fcb803"
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "f5c7c12b-6653-4307-a2cd-623186c9358e"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/doaa/content/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "doaa",
+            "content",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Edit Doaa Content",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "d2f34e7d-4138-4585-b242-34bd9cd9b6ae"
+            },
+            {
+              "key": "title",
+              "value": "دعاء النبي لإنزال الرزق من السماء و اخراجه من ارض",
+              "type": "text",
+              "uuid": "24cab32d-4173-4965-a61f-23077f20afdc"
+            },
+            {
+              "key": "content",
+              "value": "اللهم ان كان رزقي في الأرض ف أنزله و ان كان في الأرض ف أخرجه و ان كان بعيدا ف قربه ...الخ",
+              "type": "text",
+              "uuid": "8348a4e9-962d-47c3-bb36-db8b90fcb803"
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "f5c7c12b-6653-4307-a2cd-623186c9358e"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/doaa/content/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "doaa",
+            "content",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Doaa Content",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/doaa/content/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "doaa",
+            "content",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2Nzk1MDYxLCJpYXQiOjE3NjY3OTE0NjEsImp0aSI6IjY2YmRlMjc3MTJkNTRjMWRiZWM2ZGY0NmUxY2U2YWVmIiwidXNlcl9pZCI6IjNjZjI5NDJkLWQ5MzgtNDAxZS05YTA3LTBmNDg3YTJkMjI2YiJ9.vneC3XkC8tQygLOiqQpghsieKdAKFscDOsdYPB54zMc",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}

@@ -1,0 +1,503 @@
+{
+  "info": {
+    "_postman_id": "b4679deb-ade0-41bb-ae95-214f65fe3430",
+    "name": "Hadith app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46754777",
+    "_collection_link": "https://go.postman.co/collection/46754777-b4679deb-ade0-41bb-ae95-214f65fe3430?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Hadith's Video",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/videos/?title=الاربعين&description=سوف نتعلم&created_at=",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "videos",
+            ""
+          ],
+          "query": [
+            {
+              "key": "title",
+              "value": "الاربعين"
+            },
+            {
+              "key": "description",
+              "value": "سوف نتعلم"
+            },
+            {
+              "key": "created_at",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post New Hadith's Video",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "الاربعين النوويه 1",
+              "type": "text",
+              "uuid": "e7bb251c-7564-407b-9bb3-c989d919a0fd"
+            },
+            {
+              "key": "description",
+              "value": "سوف نتعلم بهذا الفيديو خمس احاديث مع شرحهم في الاربعين النوويه",
+              "type": "text",
+              "uuid": "b5904658-fc79-468c-a290-ab3a693e788b"
+            },
+            {
+              "key": "url",
+              "value": "",
+              "type": "text",
+              "uuid": "e578b90f-7185-4aab-bbcc-60f658c6391f"
+            },
+            {
+              "key": "thumbnail",
+              "type": "file",
+              "uuid": "116dbae7-1afa-4b86-8932-6389db01db82",
+              "src": "postman-cloud:///1f093ad9-a75c-44c0-a704-51bfa221fbc1"
+            },
+            {
+              "key": "video",
+              "type": "file",
+              "uuid": "9d707117-50ca-41d2-8ff4-e1b208dea78c",
+              "src": "/C:/Users/moham/Videos/Hiroooo.mp4"
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "54e847a4-c9ff-4845-abf9-643d96215aff"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/videos/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "videos",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get one Hadith's Video",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/videos/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "videos",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Hadith's Video",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "الاربعين النوويه 1",
+              "type": "text",
+              "uuid": "e7bb251c-7564-407b-9bb3-c989d919a0fd"
+            },
+            {
+              "key": "description",
+              "value": "سوف نتعلم بهذا الفيديو خمس احاديث مع شرحهم في الاربعين النوويه",
+              "type": "text",
+              "uuid": "b5904658-fc79-468c-a290-ab3a693e788b"
+            },
+            {
+              "key": "url",
+              "value": "",
+              "type": "text",
+              "uuid": "e578b90f-7185-4aab-bbcc-60f658c6391f",
+              "disabled": true
+            },
+            {
+              "key": "thumbnail",
+              "type": "file",
+              "uuid": "116dbae7-1afa-4b86-8932-6389db01db82",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad",
+              "disabled": true
+            },
+            {
+              "key": "video",
+              "type": "file",
+              "uuid": "9d707117-50ca-41d2-8ff4-e1b208dea78c",
+              "src": "/C:/Users/moham/Videos/Hiroooo.mp4",
+              "disabled": true
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "54e847a4-c9ff-4845-abf9-643d96215aff",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/videos/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "videos",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Hadith's Video partial",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "الاربعين النووية",
+              "type": "text",
+              "uuid": "e7bb251c-7564-407b-9bb3-c989d919a0fd",
+              "disabled": true
+            },
+            {
+              "key": "description",
+              "value": "سوف نتعلم بهذا الفيديو خمس احاديث مع شرحهم في الاربعين النوويه",
+              "type": "text",
+              "uuid": "b5904658-fc79-468c-a290-ab3a693e788b"
+            },
+            {
+              "key": "url",
+              "value": "",
+              "type": "text",
+              "uuid": "e578b90f-7185-4aab-bbcc-60f658c6391f",
+              "disabled": true
+            },
+            {
+              "key": "thumbnail",
+              "type": "file",
+              "uuid": "116dbae7-1afa-4b86-8932-6389db01db82",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad",
+              "disabled": true
+            },
+            {
+              "key": "video",
+              "type": "file",
+              "uuid": "9d707117-50ca-41d2-8ff4-e1b208dea78c",
+              "src": "/C:/Users/moham/Videos/Hiroooo.mp4",
+              "disabled": true
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "54e847a4-c9ff-4845-abf9-643d96215aff",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/videos/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "videos",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Hadith's Video",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/videos/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "videos",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Hadith's PDFs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/pdfs/?title=الاربعي",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "pdfs",
+            ""
+          ],
+          "query": [
+            {
+              "key": "title",
+              "value": "الاربعي"
+            },
+            {
+              "key": "created_at",
+              "value": "Date object",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Hadith's PDF",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "الاربعين النوويه 2",
+              "type": "text",
+              "uuid": "c3f8214b-eea2-4eba-8f3c-4a3ea1211dcd"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "01e125d4-87a7-4377-9acd-799b38a8b36a",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad"
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "9c06f696-72b9-48ff-95ef-84058edfe4d0"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/pdfs/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "pdfs",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get one Hadith's PDF",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/pdfs/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "pdfs",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Hadith's PDF",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "الاربعون النوويه",
+              "type": "text",
+              "uuid": "c3f8214b-eea2-4eba-8f3c-4a3ea1211dcd"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "01e125d4-87a7-4377-9acd-799b38a8b36a",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad"
+            },
+            {
+              "key": "order",
+              "value": "3",
+              "type": "text",
+              "uuid": "9c06f696-72b9-48ff-95ef-84058edfe4d0"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/pdfs/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "pdfs",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Hadith's PDF Partial",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "الاربعون النوويه",
+              "type": "text",
+              "uuid": "c3f8214b-eea2-4eba-8f3c-4a3ea1211dcd",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "01e125d4-87a7-4377-9acd-799b38a8b36a",
+              "src": "postman-cloud:///1f093ad9-a79e-4370-96af-9b9fe6ba0aad",
+              "disabled": true
+            },
+            {
+              "key": "order",
+              "value": "1",
+              "type": "text",
+              "uuid": "9c06f696-72b9-48ff-95ef-84058edfe4d0"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/pdfs/1/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "pdfs",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Hadith's PDF",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/pdfs/2/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "pdfs",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2Nzk1MDYxLCJpYXQiOjE3NjY3OTE0NjEsImp0aSI6IjY2YmRlMjc3MTJkNTRjMWRiZWM2ZGY0NmUxY2U2YWVmIiwidXNlcl9pZCI6IjNjZjI5NDJkLWQ5MzgtNDAxZS05YTA3LTBmNDg3YTJkMjI2YiJ9.vneC3XkC8tQygLOiqQpghsieKdAKFscDOsdYPB54zMc",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
